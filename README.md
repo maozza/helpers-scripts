@@ -37,7 +37,9 @@ optional arguments:
 
 
 ##elasticsearch to csv
-Can export by lucene query or regular json query as string.<br>
+ Tool for exporting elasticsearch query to CSV file assumption: the response document is not multidimensional(nested)
+ document. it will execute elasticsearch query_string, for example query_string: this AND that OR thus.
+ it can handle large number of Elasticsearch results (even all results) by using `Scroll`.<br>
 example for usage:<br>
 `python3 elasticsearch2csv.py -i index_name -t type_name  --query_string "this AND that"`
 ```bash
