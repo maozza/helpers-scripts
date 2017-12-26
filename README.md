@@ -1,7 +1,13 @@
 # helper scripts
 
+here you can find the following scripts:
+1. `csv_diff.py` compare two csv files<br>
+1.  `elasticsearch2csv.py` export data from elasticsearche to csv <br>
+
+
+
+
 ##cvs diff
-`csv_diff.py` compare two csv files<br>
 
 The script creates two files:<br> 
 `field_change_sum.csv` - contain the amount of changes for each field.<br>
@@ -31,7 +37,6 @@ optional arguments:
 
 
 ##elasticsearch to csv
-`elasticsearch2csv.py` export data from elasticsearche to csv <br>
 Can export by lucene query or regular json query as string.<br>
 example for usage:<br>
 `python3 elasticsearch2csv.py -i index_name -t type_name  --query_string "this AND that"`
