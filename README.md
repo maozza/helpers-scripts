@@ -10,8 +10,8 @@ here you can find the following scripts:
 ##cvs diff
 
 The script creates two files:<br> 
-`field_change_sum.csv` - contain the amount of changes for each field.<br>
-`results_details.json` - contain the changes in json format.
+`field_change_sum.csv` - contain the number of changes in each field.<br>
+`results_details.json` - contain the changes in JSON format.
 
 
 ```bash
