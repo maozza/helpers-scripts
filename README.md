@@ -2,7 +2,7 @@
 
 here you can find the following scripts:
 1. `csv_diff.py` compare two csv files<br>
-1.  `elasticsearch2csv.py` export data from elasticsearche to csv <br>
+1.  `elasticsearch2csv.py` export data from elasticsearch to csv <br>
 
 
 
