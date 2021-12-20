@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+from os import kill
 import elasticsearch
 import argparse
 import csv
@@ -108,7 +109,15 @@ for i in aliases:
 '''
 Fetch the mapping in order to create the header
 '''
-mapping=es.indices.get_mapping(index=index,doc_type=doc_type,include_type_name=True)[index]['mappings'][doc_type]['properties'].keys()
+if index.endswith("*"):
+    i = es.indices.get(index)
+    for x in i:
+        temp_index = x
+        break
+else:
+    temp_index=index
+
+mapping=es.indices.get_mapping(index=temp_index)[temp_index]['mappings']['properties'].keys()
 
 '''
 Set handler to elasticsearch
